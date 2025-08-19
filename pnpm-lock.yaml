@@ -32,6 +32,9 @@ importers:
       next:
         specifier: 15.4.6
         version: 15.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      nodemailer:
+        specifier: ^7.0.5
+        version: 7.0.5
       postcss:
         specifier: ^8.5.6
         version: 8.5.6
@@ -41,6 +44,9 @@ importers:
       react-dom:
         specifier: 19.1.0
         version: 19.1.0(react@19.1.0)
+      resend:
+        specifier: ^6.0.1
+        version: 6.0.1
       tailwind-merge:
         specifier: ^3.3.1
         version: 3.3.1
@@ -678,6 +684,10 @@ packages:
     resolution: {integrity: sha512-dRB78srN/l6gqWulah9SrxeYnxeddIG30+GOqK/9OlLVyLg3HPnr6SqOWTWOXKRwC2eGYCkZ59NNuSgvSrpgOA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
+  nodemailer@7.0.5:
+    resolution: {integrity: sha512-nsrh2lO3j4GkLLXoeEksAMgAOqxOv6QumNRVQTJwKH4nuiww6iC2y7GyANs9kRAxCexg3+lTWM3PZ91iLlVjfg==}
+    engines: {node: '>=6.0.0'}
+
   object-inspect@1.13.4:
     resolution: {integrity: sha512-W67iLl4J2EXEGTbfeHCffrjDfitvLANg0UlX3wFUUSTx92KXRFegMHUVgSqE+wvhAbi4WqjGg9czysTV2Epbew==}
     engines: {node: '>= 0.4'}
@@ -705,6 +715,15 @@ packages:
   react@19.1.0:
     resolution: {integrity: sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==}
     engines: {node: '>=0.10.0'}
+
+  resend@6.0.1:
+    resolution: {integrity: sha512-xNZ0gKAOqQcH83lXsqNOwBbpKROnsZpQr9mXRdG6hrHTF9G9Il2pkoTRtq7rJzXMvCZX+I79oahsbSeaYOWRFA==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@react-email/render': ^1.1.0
+    peerDependenciesMeta:
+      '@react-email/render':
+        optional: true
 
   safe-buffer@5.2.1:
     resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==}
@@ -1332,6 +1351,8 @@ snapshots:
       fetch-blob: 3.2.0
       formdata-polyfill: 4.0.10
 
+  nodemailer@7.0.5: {}
+
   object-inspect@1.13.4: {}
 
   picocolors@1.1.1: {}
@@ -1358,6 +1379,8 @@ snapshots:
       scheduler: 0.26.0
 
   react@19.1.0: {}
+
+  resend@6.0.1: {}
 
   safe-buffer@5.2.1: {}
 

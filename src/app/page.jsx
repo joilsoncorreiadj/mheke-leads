@@ -37,7 +37,6 @@ export default function Index() {
         setCurrentStep('ticket');
         break;
       case 'ticket':
-        console.log('Final answers:', answers);
         setCurrentStep('thanks');
         break;
     }
