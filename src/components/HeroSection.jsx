@@ -1,6 +1,21 @@
 import { motion } from "framer-motion";
+import useFacebookPixel from "@/hooks/useFacebookPixel";
 
 export default function HeroSection({ onStart }) {
+  const { trackEvent } = useFacebookPixel();
+
+  const handleStartClick = () => {
+    // Rastreia o clique no botão de CTA
+    trackEvent('Lead', {
+      content_name: 'Botão CTA Página Inicial',
+      content_category: 'lead',
+      value: 0.00,
+      currency: 'BRL'
+    });
+    
+    // Chama a função onStart original
+    onStart();
+  };
   return (
     <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
       <div className="text-center max-w-4xl mx-auto relative z-10">
@@ -25,7 +40,7 @@ export default function HeroSection({ onStart }) {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <button
-            onClick={onStart}
+            onClick={handleStartClick}
             className="btn-primary text-base sm:text-lg md:text-xl px-6 py-3 sm:px-8 sm:py-4 font-medium transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
           >
             👉 Quero minha análise gratuita

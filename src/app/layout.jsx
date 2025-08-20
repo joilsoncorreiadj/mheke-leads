@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import FacebookPixel from "@/components/FacebookPixel";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,12 +16,8 @@ export const metadata = {
   title: "Mheke - Sua Estratégia Digital",
   description: "Descubra o que está travando o crescimento da sua marca e como mudar isso agora.",
   viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-    viewportFit: 'cover'
+    themeColor: '#FF00A4',
   },
-  themeColor: '#FF00A4',
   icons: {
     icon: '/favicon.ico',
   },
@@ -34,10 +31,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white min-h-screen flex flex-col`}
-      >
+    <html lang="pt-BR" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className="min-h-screen bg-white font-sans text-gray-900 antialiased">
+        <FacebookPixel />
         {children}
       </body>
     </html>
